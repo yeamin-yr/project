@@ -1,0 +1,50 @@
+body{
+    background-color:aqua;
+}
+
+.div-style{
+    margin: 100px;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 5px;
+    padding: 20px;
+}
+#accountarea{
+    display: none;
+}
+.style1{
+    margin: 100px;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+h2{
+margin-bottom: 50px;
+}
+
+.dcard{
+margin:  20px;
+padding: 20px;
+color: white;
+border-radius: 5px;
+background-color:#6a5acd;
+
+
+}
+
+.wcard{
+margin: 20px;
+padding: 20px;
+color: white;
+border-radius: 5px;
+background-color:#ffa07a;
+
+
+}
+
+.bcard{
+margin: 20px;
+padding: 20px;
+color: white;
+border-radius: 5px;
+background-color: tomato;
+}

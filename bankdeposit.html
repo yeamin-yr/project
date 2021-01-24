@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bankdeposit.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div id="loginarea">
+
+    <h1 style="text-align: center; " class="mt-5">Welcome to yeamin bank</h1>
+    
+    <div class="div-style" id="">
+       
+
+
+
+
+    <h3>login</h3><br>
+    <input type="text" class="form-control"
+    placeholder="usermane"><br>
+    <input type="password" class="form-control"
+    placeholder="password"><br>
+    <button class=" btn btn-success" id="btnlogin"> Enter</button>
+
+
+        
+    </div>
+
+    </div>
+
+
+
+    <div id="accountarea">
+        <div class="row mt-5">
+            <div class="col-md-4">
+                
+                
+                <div class="dcard" >
+                   <h4> Deposit</h4>
+                   <h3> $ <span id="deposit-hl">00</span></h3>
+                </div>
+                
+    
+    
+    
+            </div>
+            <div class="col-md-4">
+    
+                <div class="wcard">
+                     <h4>Withdraw</h4>
+                     <h3>$ <span id="woutput">00</span></h3>
+    
+                </div>
+    
+            </div>
+            <div class="col-md-4">
+    
+                 <div class="bcard">
+                     <h4>Balance</h4>
+                     <h3>$ <span id="current-balance">500</span></h3>
+                </div>
+    
+            </div>
+            
+        </div>
+    
+        <div class="row mt-5 ">
+            <div class="col-md-6" >
+                <div class="style1">
+                    <h4>Deposit</h4><br>
+                    <input id="in-deposit" type="text" class="form-control" placeholder="$ amount you want to deposit"  ><br>
+                    <button id="btn-deposit" class="btn btn-success">Enter</button>
+                </div>
+    
+            </div>
+        
+        
+            <div class="col-md-6" >
+                <div class="style1">
+                    <h4>Withdraw</h4><br>
+                    <input id="winput" type="text" class="form-control" placeholder="$ amount you want to Withdraw" ><br>
+                    <button id="wbtn" class="btn btn-success">Enter</button>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        //login area
+        const hello=document.getElementById('btnlogin');
+        
+        hello.addEventListener('click', function()
+        
+        {
+            const hello=document.getElementById('loginarea');
+
+            hello.style.display='none';
+
+            const bye =document.getElementById('accountarea');
+            bye.style.display='block'
+        
+        })
+        //account-area
+        const addDeposit =document.getElementById('btn-deposit');
+        addDeposit.addEventListener('click' , function(){
+            const inputDeposit = document.getElementById('in-deposit').value;
+            const inputNumber = parseFloat(inputDeposit);
+            const depositShow = document.getElementById('deposit-hl').innerText;
+            const showNumber = parseFloat(depositShow);
+
+            const finaloutput = showNumber + inputNumber;
+            document.getElementById('deposit-hl').innerText=finaloutput;
+            document.getElementById('in-deposit').value="" ;
+
+            const currentBalance = document.getElementById('current-balance').innerText;
+            const currentNumber = parseFloat(currentBalance);
+
+            const finalBalance= currentNumber + inputNumber;
+
+            document.getElementById('current-balance').innerText=finalBalance;
+        })
+        
+        //withdaw area
+        const WithdrawMoney = document.getElementById('wbtn');
+        WithdrawMoney.addEventListener('click',function(){
+            const wmoney =document.getElementById('winput').value;
+            const convate =parseFloat(wmoney);
+            const withDRawNumber = document.getElementById('woutput').innerText;
+            const wconvate =parseFloat(withDRawNumber);
+
+            const finallyy = convate+wconvate;
+            document.getElementById('woutput').innerText = finallyy;
+            document.getElementById('winput').value="";
+
+            const currentBalancee = document.getElementById('current-balance').innerText;
+            const currentNumberr = parseFloat(currentBalancee);
+
+            const atLast = currentNumberr-convate;
+
+            document.getElementById('current-balance').innerText=atLast;
+        })
+        
+
+    </script>
+    
+</body>
+</html>
